@@ -6,9 +6,9 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
-    "lint": "eslint .",
+    "lint": "eslint src",
     "test": "jest",
-    "validate": "npm ls"
+    "flow": "flow"
   },
   "dependencies": {
     "@babel/core": "^7.1.0",
