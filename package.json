@@ -7,7 +7,8 @@
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
     "lint": "eslint .",
-    "test": "jest"
+    "test": "jest",
+    "validate": "npm ls"
   },
   "dependencies": {
     "@babel/core": "^7.1.0",
@@ -51,8 +52,14 @@
     "flow-bin": "^0.82.0",
     "jest": "^23.6.0",
     "jest-dom": "^2.0.2",
+    "precommit-hook": "^3.0.0",
     "prettier": "^1.14.3",
     "react-testing-library": "^5.1.1",
     "webpack-dev-server": "^3.1.9"
-  }
+  },
+  "pre-commit": [
+    "lint",
+    "flow",
+    "test"
+  ]
 }
